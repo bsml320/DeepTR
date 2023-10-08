@@ -66,7 +66,7 @@ This online tool requires TCR repertoires through bulk or single-cell methods, i
 ## Results
 The top ranked interaction between TCR and pMHC in each HLA allele would be visualized in a interactive way on the output page after a few minutes of running time. The whole prediction results, which are well organized in table format, could also be obtained and downloaded.
 
-<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/Picture7.png" width="600px"></div>
+<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/Picture7.png" width="550px"></div>
 
 # Citation
-Please cite the following paper for using: Xu H, Zhao Z. Deciphering RNA modification and post-transcriptional regulation by deep learning framework. In submission.
+Please cite the following paper for using: Xu H, Zhao Z. Prediction and characterization of T cell response by improved T cell receptors to antigen specificity with interpretable deep learning. In submission.
