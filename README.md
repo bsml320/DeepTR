@@ -29,14 +29,13 @@ pip install h5py==2.10.0
 
 # Usage
 Please cd to the folder which contains DeepTR_Prediction.py.
-Example: 
 ```
-cd NetBCE/prediction/
-python NetBCE_prediction.py -f ../testdata/test.fasta -o ../result/test_result
+cd DeepTR_Prediction/
+python DeepTR_Prediction.py -inf './data/test_tcr.txt' -out './prediction'
 ```
 For details of other parameters, run:
 ```
-python NetBCE_prediction.py --help
+python DeepTR_Prediction.py --help
 ```
 # Citation
 Please cite the following paper for using: Xu H, Zhao Z. Deciphering RNA modification and post-transcriptional regulation by deep learning framework. In submission.
