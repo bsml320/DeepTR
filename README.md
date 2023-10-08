@@ -10,14 +10,15 @@ Download NetRNApan by
 ```
 git clone https://github.com/BioDataStudy/DeepTR.git
 ```
-Installation has been tested in Linux server, CentOS Linux release 7.8.2003 (Core), with Python 3.7. Since the package is written in python 3x, python3x with the pip tool must be installed. DeepTR uses the following dependencies: numpy, scipy, pandas, h5py, keras version=2.3.1, tensorflow=1.15 shutil, and pathlib. We highly recommend that users leave a message under the NetRNApan issue interface (https://github.com/bsml320/NetRNApan/issue) when encountering any installation and running problems. We will deal with it in time. You can install these packages by the following commands:
+Installation has been tested in Linux server, CentOS Linux release 7.8.2003 (Core), with Python 3.7. Since the package is written in python 3x, python3x with the pip tool must be installed. DeepTR uses the following dependencies: numpy, scipy, pandas, h5py, torch, allennlp, keras version=2.3.1, tensorflow=1.15 shutil, and pathlib. We highly recommend that users leave a message under the NetRNApan issue interface (https://github.com/bsml320/NetRNApan/issue) when encountering any installation and running problems. We will deal with it in time. You can install these packages by the following commands:
 ```
 conda create -n NetRNApan python=3.7
 conda activate NetRNApan
 pip install pandas
 pip install numpy
 pip install scipy
-pip install allennlp
+pip install torch
+pip install allennlp==0.9.0
 pip install -v keras==2.3.1
 pip install -v tensorflow==1.15
 pip install seaborn
