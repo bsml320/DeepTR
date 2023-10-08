@@ -42,6 +42,9 @@ For details of other parameters, run:
 ```
 python DeepTR_Prediction.py --help
 ```
+### test_tcr.csv: test csv file with 6 columns named as "CDR3a,CDR3a_V,CDR3b,CDR3b_V,Antigens,HLA_alleles": TCR-alpha CDR3 sequence, TCR-alpha V gene, TCR-beta CDR3 sequence, TCR-beta V gene, peptide sequence, and HLA allele. 
+
+<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/input_example.png" width="600px"></div>
 
 # Web Server
 Researchers can run DeepTR online at https://bioinfo.uth.edu/DeepTR. For commercial usage inquiries, please contact the authors. 
