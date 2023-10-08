@@ -28,7 +28,7 @@ pip install h5py==2.10.0
 ```
 
 # Usage
-Please cd to the NetBCE/prediction/ folder which contains predict.py.
+Please cd to the folder which contains DeepTR_Prediction.py.
 Example: 
 ```
 cd NetBCE/prediction/
