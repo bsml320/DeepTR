@@ -35,6 +35,7 @@ pip install h5py==2.10.0
 Please cd to the folder which contains DeepTR_Prediction.py.
 ```
 cd DeepTR_Prediction/
+
 python DeepTR_Prediction.py -inf './data/test_tcr.txt' -out './prediction'
 ```
 For details of other parameters, run:
@@ -42,47 +43,13 @@ For details of other parameters, run:
 python DeepTR_Prediction.py --help
 ```
 
-# Usage
-### ImmuneApp provides two services: precise antigen presentation prediction and clinical immunopeptidomic cohorts analysis.
-
-__1__. For antigen presentation prediction, this module accept two different types of input; FASTA and Peptide. In addition, candidate HLA molecules should be specified in the predictions. For FASTA input, the peptide length(s) should be specified.
-
-### Example of antigen presentation prediction: 
-For __peptides input__, please uses:
-```
-python ImmuneApp_prediction.py -f 'testdata/test_peplist.txt' -a 'HLA-A*01:01' 'HLA-A*02:01' 'HLA-A*03:01' 'HLA-B*07:02' -ap 'yes' -o 'results'
-```
-
-For __FASTA input__, please uses:
-```
-python ImmuneApp_prediction.py -fa 'testdata/test.fasta' -a 'HLA-A*01:01' 'HLA-A*02:01' 'HLA-A*03:01' 'HLA-B*07:02' -ap 'yes' -o 'results'
-```
-__2__. For immunopeptidome analysis, this module accept (clinical) immunopeptidomic samples as input, together with HLA molecule(s) by HLA tying tool.
-
-### Example of immunopeptidome analysis: 
-For __single sample__, please uses:
-```
-python ImmuneApp_immunopeptidomics_analysis.py -f testdata/Melanoma_tissue_sample_of_patient_5.txt -a HLA-A*01:01,HLA-A*25:01,HLA-B*08:01,HLA-B*18:01 -o results
-```
-
-For __multiple samples__, separate the different sample names or HLA alleles with spaces, uses:
-```
-python ImmuneApp_immunopeptidomics_analysis.py -f testdata/Melanoma_tissue_sample_of_patient_5.txt testdata/Melanoma_tissue_sample_of_patient_8.txt -a HLA-A*01:01,HLA-A*25:01,HLA-B*08:01,HLA-B*18:01 HLA-A*01:01,HLA-A*03:01,HLA-B*07:02,HLA-B*08:01,HLA-C*07:02,HLA-C*07:01 -o results
-```
-
-For details of other parameters, run:
-```
-python ImmuneApp_immunopeptidomics_analysis.py --help
-
-python ImmuneApp_prediction.py --help
-```
 # Web Server
-Researchers can run ImmuneApp online at https://bioinfo.uth.edu/iapp/. For commercial usage inquiries, please contact the authors. 
+Researchers can run DeepTR online at https://bioinfo.uth.edu/DeepTR. For commercial usage inquiries, please contact the authors. 
 
 ## Workflow of web portal
-ImmuneApp implements four main modules: “Discovery”, “Analysis”, “Results” and “Controller”. In the backend, three well-trained deep learning models (ImmuneApp_BA, ImmuneApp_EL and ImmuneApp_AP) are used for the predictions of binding affinities, ligand probabilities, and overall antigen presentation as well as immunopeptidomic cohorts analysis, respectively. The “Controller” module checks the input data format, sends the data from frontend interfaces to the backend, creates the results using models, and then provides the results on the “Results” page. We implemented both pages in a responsive manner by using the HTML5, CSS, Bootstrap3, and JavaScript. Additionally, the "Controller" is called through Ajax technology to submit jobs, retrieve data, and show results. There is no limit to the number of tasks submitted by each user. ImmuneApp can automatically handle the jobs in a queue, which allows up to 5 jobs to execute concurrently.
+The workflow of the DeepTR online server is illustrated below. The information given is initially checked by the web server for proper formatting and TCR records, among other things. DeepTR launches a new job and changes the state of the work to "Running" after the input data is checked for correct format. Otherwise, DeepTR moves the new work to the bottom of the queue and changes its status to "Pending." Users are then routed to a website for tracking the job status after a job is successfully submitted, where the status is updated every 10 seconds until the task is complete. Through the unique job identifier, which can be generated automatically or customized by the submitter, users are able to monitor the job status and retrieve the result. .
 
-<div align=center><img src="https://bioinfo.uth.edu/iapp/github/Supplementary_figure_7.jpg" width="600px"></div>
+<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/Picture5.png" width="600px"></div>
 
 ## Usage
 The “Discovery” module accepts two input types: “FASTA” and “Peptide”. Users can directly copy the input data to an online submission text box. Moreover, MHC molecules and the peptide length (only FASTA input) need to be specified for running prediction. The “Analysis” module accepts clinical immunopeptidomic samples as input, together with MHC molecules. The input sample(s) can be directly copied to an online submission text box or uploaded from the users local disk. Sample identity should be specified. This module provides intuitive report for personalized analysis, statistical reports, and visualization of results for clinical immunopeptidomic cohorts.
