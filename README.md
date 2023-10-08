@@ -44,11 +44,11 @@ python DeepTR_Prediction.py --help
 ```
 ### test_tcr.csv: test csv file with 6 columns named as "CDR3a,CDR3a_V,CDR3b,CDR3b_V,Antigens,HLA_alleles": TCR-alpha CDR3 sequence, TCR-alpha V gene, TCR-beta CDR3 sequence, TCR-beta V gene, peptide sequence, and HLA allele. 
 
-<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/input_example.png" width="800px"></div>
+<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/input_example_3.png" width="800px"></div>
 
-### DeepTR_predictions.tsv: result file with 8 columns named as "CDR3a,CDR3a_V,CDR3b,CDR3b_V,Antigens,HLA_alleles,,Score_BA,Score_interaction": TCR-alpha CDR3 sequence, TCR-alpha V gene, TCR-beta CDR3 sequence, TCR-beta V gene, peptide sequence, HLA allele, score of peptide binding to HLA, score of binding between pHLA and TCR. 
+### DeepTR_predictions.tsv: result file includes the score of peptide binding to HLA and score of binding between pHLA and TCR. 
 
-<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/out_example.png" width="800px"></div>
+<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/out_example_3.png" width="800px"></div>
 
 # Web Server
 Researchers can run DeepTR online at https://bioinfo.uth.edu/DeepTR. For commercial usage inquiries, please contact the authors. 
