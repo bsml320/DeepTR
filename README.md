@@ -52,7 +52,7 @@ The workflow of the DeepTR online server is illustrated below. The information g
 <div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/Picture5.png" width="600px"></div>
 
 ## Usage
-The “Discovery” module accepts two input types: “FASTA” and “Peptide”. Users can directly copy the input data to an online submission text box. Moreover, MHC molecules and the peptide length (only FASTA input) need to be specified for running prediction. The “Analysis” module accepts clinical immunopeptidomic samples as input, together with MHC molecules. The input sample(s) can be directly copied to an online submission text box or uploaded from the users local disk. Sample identity should be specified. This module provides intuitive report for personalized analysis, statistical reports, and visualization of results for clinical immunopeptidomic cohorts.
+This online tool requires TCR repertoires through bulk or single-cell methods, including paired TCRα & β sequences of CDRs and V genes. Candidate antigens and HLA alleles also need be specified. The top ranked interaction between TCR and pMHC in each HLA allele would be visualized in an interactive way on the output page after a few minutes of running time. The whole prediction results, which are well organized in table format, could also be obtained, and downloaded. The testing has been conducted by multiple users from different countries. Tutorial is at https://bioinfo.uth.edu/DeepTR/Tutorial.php.
 
 <div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/Picture6.png" width="600px"></div>
 
