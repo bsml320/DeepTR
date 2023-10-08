@@ -54,19 +54,19 @@ The workflow of the DeepTR online server is illustrated below. The information g
 ## Usage
 This online tool requires TCR repertoires through bulk or single-cell methods, including paired TCRα & β sequences of CDRs and V genes. Candidate antigens and HLA alleles also need be specified. The top ranked interaction between TCR and pMHC in each HLA allele would be visualized in an interactive way on the output page after a few minutes of running time. The whole prediction results, which are well organized in table format, could also be obtained, and downloaded. The testing has been conducted by multiple users from different countries. Tutorial is at https://bioinfo.uth.edu/DeepTR/Tutorial.php.
 
-<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/Picture6.png" width="600px"></div>
+<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/Picture6.png" width="700px"></div>
 
-### Introduction of input in antigen presentation prediction: 
+### Input: 
 1. Job identifier: Job identifier can be generated automatically or customized by the submitter. It is confidential to other users and can be used for job status monitoring and result retrieval.(See Results page).It is required.
-2. Input type: Provides two input formats, including the classic protein FASTA format and direct input of multiple peptides.
-3. Input textarea: The user can directly copy the protein sequence or peptide data in the input box.
-4. Peptide length(AAs): When the input method is Fasta format. The user needs to select one or more peptide lengths so that the server can construct a library of candidate antigen peptides.
-5. HLA alleles: The ImmuneApp 1.0 server predicts peptides binding to more than 10,000 human MHC molecule. We constructed a classification tree of HLA. Users can quickly retrieve and submit candidate HLA alleles through the search box and tree map. Each submitted task is allowed to select up to 20 HLA alleles.
-6. Operation buttons: Submit, reset the submission form, or access the example dataset.
+2. TCR input: Please input TCR repertoires below. Each row contains a TCR record (CDR3a, TRAV gene, CDR3b, TRBV gene) and separated by commas.
+3. Antigen input: The user can directly copy the antigens in the input box. The length of the antigens should be 8-15 mer.
+4. HLA alleles: The DeepTCR 1.0 server predicts pMHC-TCR binding to more than >100 well studied human MHC molecule. We constructed a classification tree of HLA. Users can quickly retrieve and submit candidate HLA alleles through the search box and tree map. Each submitted task is allowed to select up to 10 HLA alleles.
+5. Operation buttons: Submit, reset the submission form, or access the example dataset.
 
 ## Results
-1. Analysis, statistics, and visualization for melanoma-associated samples using ImmuneApp.
-<div align=center><img src="https://bioinfo.uth.edu/iapp/github/Supplementary_figure_9.jpg" width="600px"></div>
+The top ranked interaction between TCR and pMHC in each HLA allele would be visualized in a interactive way on the output page after a few minutes of running time. The whole prediction results, which are well organized in table format, could also be obtained and downloaded.
+
+<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/Picture7.png" width="600px"></div>
 
 # Citation
 Please cite the following paper for using: Xu H, Zhao Z. Deciphering RNA modification and post-transcriptional regulation by deep learning framework. In submission.
