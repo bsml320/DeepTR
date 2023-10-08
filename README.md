@@ -1,4 +1,4 @@
-# DeepTR
+![图片](https://github.com/BioDataStudy/DeepTR/assets/81832081/41837294-1cbd-4027-9f15-64c1fbbd585e)![图片](https://github.com/BioDataStudy/DeepTR/assets/81832081/506b0ffb-c098-48b9-b178-ed69115f0d2c)# DeepTR
 ## Prediction and characterization of T cell response by improved T cell receptors to antigen specificity with interpretable deep learning
 
 Cellular immunity is orchestrated by T cells through their immense T-cell receptors (TCRs) repertoire, which interact with antigenic peptides presented by major histocompatibility complex (pMHC) molecules, but the specificities of the T cell response is largely undetermined because of the huge variety of TCRs. Here, we present DeepTR, a one-stop collection of unsupervised and supervised deep learning approaches for pan peptide-MHC class I binding prediction, TCR featurization, and accurate T cell response prediction. DeepTR yields higher predictive performance and more efficient feature representation for peptide binding to MHC and enables superior antigen-specific TCR featurization than current state-of-the-art approaches. Through a transfer learning strategy, DeepTR provides accurate prediction of T cell activation achieved by mimicking crucial steps of the antigen presentation pathway. DeepTR also enables the discovery of specific TCR groups with a new regulatory mechanism and characterizes important contact residues that mediate TCR-antigen binding specificity. DeepTR may advance our understanding of the mechanisms of T cell-mediated immunity and yield new insight in both personalized immune treatment and development of targeted vaccines. DeepTR is freely available at https://bioinfo.uth.edu/DeepTR.
@@ -54,7 +54,7 @@ The workflow of the DeepTR online server is illustrated below. The information g
 ## Usage
 The “Discovery” module accepts two input types: “FASTA” and “Peptide”. Users can directly copy the input data to an online submission text box. Moreover, MHC molecules and the peptide length (only FASTA input) need to be specified for running prediction. The “Analysis” module accepts clinical immunopeptidomic samples as input, together with MHC molecules. The input sample(s) can be directly copied to an online submission text box or uploaded from the users local disk. Sample identity should be specified. This module provides intuitive report for personalized analysis, statistical reports, and visualization of results for clinical immunopeptidomic cohorts.
 
-<div align=center><img src="https://bioinfo.uth.edu/iapp/github/Supplementary_figure_8.jpg" width="1000px"></div>
+<div align=center><img src="https://bioinfo.uth.edu/DeepTR/images/Picture6.png" width="1000px"></div>
 
 ### Introduction of input in antigen presentation prediction: 
 1. Job identifier: Job identifier can be generated automatically or customized by the submitter. It is confidential to other users and can be used for job status monitoring and result retrieval.(See Results page).It is required.
@@ -64,22 +64,9 @@ The “Discovery” module accepts two input types: “FASTA” and “Peptide�
 5. HLA alleles: The ImmuneApp 1.0 server predicts peptides binding to more than 10,000 human MHC molecule. We constructed a classification tree of HLA. Users can quickly retrieve and submit candidate HLA alleles through the search box and tree map. Each submitted task is allowed to select up to 20 HLA alleles.
 6. Operation buttons: Submit, reset the submission form, or access the example dataset.
 
-### Introduction of input in immunopeptidome analysis: 
-1. Job identifier: Job identifier can be generated automatically or customized by the submitter. It is confidential to other users and can be used for job status monitoring and result retrieval.(See Results page).It is required.
-2. Input textarea: The user can directly copy immunopeptidomic cohorts sample data in the input box.
-3. Upload sample(s): The user can also upload immunopeptidomic cohorts sample to the server.
-4. Sample info: The user needs to provide identification information for each sample.
-5. HLA alleles: The ImmuneApp 1.0 server predicts peptides binding to more than 10,000 human MHC molecule. We constructed a classification tree of HLA. Users can quickly retrieve and submit candidate HLA alleles through the search box and tree map. Each submitted task is allowed to select up to 6 HLA alleles.
-6. Operation buttons: Upload immunopeptidomic cohorts sample to the server by this button
-7. loaded data: A list of immunopeptidomic cohorts uploaded by users for analysis.
-8. Operation buttons: Submit, reset the submission form, or access the example dataset.
-
 ## Results
 1. Analysis, statistics, and visualization for melanoma-associated samples using ImmuneApp.
 <div align=center><img src="https://bioinfo.uth.edu/iapp/github/Supplementary_figure_9.jpg" width="600px"></div>
-
-2. Motif discovery and decomposition for melanoma-associated samples using ImmuneApp: 
-<div align=center><img src="https://bioinfo.uth.edu/iapp/github/Supplementary_figure_10.jpg" width="600px"></div>
 
 # Citation
 Please cite the following paper for using: Xu H, Zhao Z. Deciphering RNA modification and post-transcriptional regulation by deep learning framework. In submission.
